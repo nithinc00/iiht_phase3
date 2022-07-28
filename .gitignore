@@ -1,0 +1,56 @@
+
+/auction-frontend/node_modules
+/auction-frontend/.pnp
+/auction-frontend/.pnp.js
+
+# testing
+/auction-frontend/coverage
+
+# production
+/auction-frontend/build
+
+# misc
+/auction-frontend/.DS_Store
+/auction-frontend/.env.local
+/auction-frontend/.env.development.local
+/auction-frontend/.env.test.local
+/auction-frontend/.env.production.local
+
+/auction-frontend/npm-debug.log*
+/auction-frontend/yarn-debug.log*
+/auction-frontend/yarn-error.log*
+
+
+/eacution/HELP.md
+/eacution/target/
+/eacution/!.mvn/wrapper/maven-wrapper.jar
+/eacution/!**/src/main/**/target/
+/eacution/!**/src/test/**/target/
+
+### STS ###
+/eacution/.apt_generated
+/eacution/.classpath
+/eacution/.factorypath
+/eacution/.project
+/eacution/.settings
+/eacution/.springBeans
+/eacution/.sts4-cache
+
+### IntelliJ IDEA ###
+/eacution/.idea
+/eacution/*.iws
+/eacution/*.iml
+/eacution/*.ipr
+
+### NetBeans ###
+/eacution/nbproject/private/
+/eacution/nbbuild/
+/eacution/dist/
+/eacution/nbdist/
+/eacution/.nb-gradle/
+/eacution/build/
+/eacution/!**/src/main/**/build/
+/eacution/!**/src/test/**/build/
+
+### VS Code ###
+/eacution/.vscode/

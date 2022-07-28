@@ -1,0 +1,10 @@
+package com.project.auction.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.project.auction.entities.Message;
+
+@Repository
+public interface MessageRepo extends JpaRepository<Message,Long>{
+
+}

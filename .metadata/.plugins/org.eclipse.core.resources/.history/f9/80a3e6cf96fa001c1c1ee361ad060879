@@ -1,0 +1,15 @@
+package com.project.auction.repositories;
+
+import org.springframework.data.jdbc.repository.query.Query;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.query.Param;
+
+import com.project.auction.entities.Bid;
+
+import antlr.collections.List;
+
+public interface BidRepo extends JpaRepository<Bid,Long>{
+	@Query(value = "SELECT * FROM bids WHERE auction_id = ?")
+    List findBidsByAuctionId(long auctionID);
+
+}

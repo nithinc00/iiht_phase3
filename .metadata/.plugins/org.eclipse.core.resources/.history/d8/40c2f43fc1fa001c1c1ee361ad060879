@@ -1,0 +1,64 @@
+package com.project.auction.entities;
+
+import javax.persistence.*;
+
+
+@Entity
+@Table(name="bids")
+public class Bid {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+    @Column(nullable = true)
+    private int auction_id;
+    private int bid;
+    @Column(nullable = true)
+    private int bidder_id;
+    private long created_at;
+    @OneToOne
+    @JoinColumn(name = "auction_id", updatable=false, insertable = false)
+    private AuctionItem auction_item;
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public int getAuction_id() {
+		return auction_id;
+	}
+	public void setAuction_id(int auction_id) {
+		this.auction_id = auction_id;
+	}
+	public int getBid() {
+		return bid;
+	}
+	public void setBid(int bid) {
+		this.bid = bid;
+	}
+	public int getBidder_id() {
+		return bidder_id;
+	}
+	public void setBidder_id(int bidder_id) {
+		this.bidder_id = bidder_id;
+	}
+	public long getCreated_at() {
+		return created_at;
+	}
+	public void setCreated_at(long created_at) {
+		this.created_at = created_at;
+	}
+	public AuctionItem getAuction_item() {
+		return auction_item;
+	}
+	public void setAuction_item(AuctionItem auction_item) {
+		this.auction_item = auction_item;
+	}
+//    @OneToOne
+//    @JoinColumn(name = "bidder_id", updatable=false, insertable = false)
+//    private User bidder;
+    
+
+
+}

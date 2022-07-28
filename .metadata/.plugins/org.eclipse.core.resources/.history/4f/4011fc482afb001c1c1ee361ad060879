@@ -1,0 +1,5 @@
+package com.project.auction.dtos;
+
+public class SocketDTO {
+
+}

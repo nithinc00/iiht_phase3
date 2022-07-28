@@ -1,0 +1,5 @@
+package com.project.auction.repositories;
+
+public interface MessageRepo {
+
+}

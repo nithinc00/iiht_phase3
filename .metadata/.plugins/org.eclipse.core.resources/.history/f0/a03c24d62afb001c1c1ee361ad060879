@@ -1,0 +1,22 @@
+package com.project.auction.configs;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.socket.config.annotation.EnableWebSocket;
+import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
+import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry;
+
+import com.project.auction.controllers.SocketController;
+import com.project.auction.services.SocketService;
+
+@Configuration
+@EnableWebSocket
+public class WebSocketConfig implements WebSocketConfigurer{
+	@Autowired
+	private SocketService socketService;
+	public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
+        SocketController sc = new SocketController();
+        sc.setSocketService(socketService);
+        registry.addHandler(sc, "/anbud-socket").setAllowedOrigins("*");;
+    }
+}

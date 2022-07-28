@@ -1,0 +1,5 @@
+package com.project.auction.services;
+
+public class BidService {
+
+}

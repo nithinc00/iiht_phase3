@@ -1,0 +1,5 @@
+package com.project.auction.entities;
+
+public class Bid {
+
+}

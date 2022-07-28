@@ -1,0 +1,22 @@
+package com.project.auction.controllers;
+
+import javax.annotation.Resource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class UserController{
+	final String CLIENT_ID = "381472079955-jah68q207j1o6hpsevb4u3niqc79ud81.apps.googleusercontent.com";
+    final String CLIENT_SECRET = "K8f5M0PIq6PvubQYUWgwarh2";
+
+    final String passwordSalt = "keyboard-kitten";
+    
+    @Autowired
+    private UserService userService;
+    
+    @Resource(name="authenticationManager")
+    private AuthenticationManager authManager;
+    
+}
